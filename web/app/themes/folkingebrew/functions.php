@@ -63,3 +63,52 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+// Remove default dashboard widgets
+
+function remove_dashboard_meta() {
+    remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_primary', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+    remove_meta_box( 'woocommerce_dashboard_status', 'dashboard', 'normal');
+}
+add_action( 'admin_init', 'remove_dashboard_meta' );
+
+// Disable comments from the admin 
+
+function remove_comments_admin_menu() {
+    remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'remove_comments_admin_menu');
+
+function remove_comments_admin_bar() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+}
+add_action('wp_before_admin_bar_render', 'remove_comments_admin_bar');
+
+function disable_comments_admin_screen() {
+    remove_meta_box('commentsdiv', 'post', 'normal');
+    remove_meta_box('commentstatusdiv', 'post', 'normal');
+    remove_meta_box('commentsdiv', 'page', 'normal');
+    remove_meta_box('commentstatusdiv', 'page', 'normal');
+}
+add_action('admin_init', 'disable_comments_admin_screen');
+
+function disable_comments_dashboard_widget() {
+    remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+}
+add_action('wp_dashboard_setup', 'disable_comments_dashboard_widget');
+
+// Change footer admin text
+
+function remove_footer_admin () {
+    echo 'Folkingebrew - Modern Craft Beer from Groningen';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');
