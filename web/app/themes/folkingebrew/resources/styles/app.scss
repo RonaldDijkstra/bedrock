@@ -2,6 +2,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.menu-item {
-  @apply text-white;
+.nav-primary {
+  .menu-item {
+    @apply text-white;
+  }
 }
