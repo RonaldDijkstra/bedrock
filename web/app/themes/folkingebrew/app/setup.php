@@ -134,3 +134,54 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+/**
+ * Disable comments from the admin sidebar
+ *
+ * @return void
+ */
+add_action('admin_menu', function () {
+    remove_menu_page('edit-comments.php');
+});
+
+/**
+ * Disable comments from the admin sidebar
+ *
+ * @return void
+ */
+add_action('wp_before_admin_bar_render', function () {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+});
+
+/**
+ * Disable a bunch of meta boxes
+ *
+ * @return void
+ */
+add_action('admin_init', function () {
+    remove_meta_box('commentsdiv', 'post', 'normal');
+    remove_meta_box('commentstatusdiv', 'post', 'normal');
+    remove_meta_box('commentsdiv', 'page', 'normal');
+    remove_meta_box('commentstatusdiv', 'page', 'normal');
+    remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');
+    remove_meta_box('dashboard_plugins', 'dashboard', 'normal');
+    remove_meta_box('dashboard_primary', 'dashboard', 'normal');
+    remove_meta_box('dashboard_secondary', 'dashboard', 'normal');
+    remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+    remove_meta_box('dashboard_recent_drafts', 'dashboard', 'side');
+    remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+    remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
+    remove_meta_box('woocommerce_dashboard_status', 'dashboard', 'normal');
+    remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+});
+
+/**
+ * Change admin footer text
+ *
+ * @return string
+ */
+add_filter('admin_footer_text', function () {
+    return 'Folkingebrew - Modern Craft Beer from Groningen';
+});
