@@ -182,6 +182,22 @@ add_action('admin_init', function () {
  *
  * @return string
  */
-add_filter('admin_footer_text', function () {
+add_filter('admin_footer_text', function (): string {
     return 'Folkingebrew - Modern Craft Beer from Groningen';
+});
+
+/**
+ * Modify the order of menu items in the admin sidebar
+ *
+ * @param array $menu_order Array of menu item slugs
+ * @return array Modified array of menu item slugs
+ */
+add_filter('custom_menu_order', '__return_true');
+add_filter('menu_order', function (array $menu_order) {
+    return array(
+        'index.php', // Dashboard
+        'edit.php?post_type=page', // Pages
+        'edit.php', // Posts
+        'upload.php', // Media
+    );
 });
