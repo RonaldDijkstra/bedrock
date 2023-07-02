@@ -2,19 +2,24 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.nav-primary {
-  .menu-item {
-    @apply text-white;
-  }
-}
-
 // Custom breakpoint for positioning our fixed header below the WordPress admin bar
 .site-header {
   .admin-bar & {
-    top: 46px; 
+    top: 46px;
 
     @media only screen and (min-width: 782px) {
       top: 32px;
     }
+  }
+}
+
+// Target the crappy WordPress way of setting up the main navigation, needs refactor
+.main-navigation {
+  @apply flex justify-center;
+
+  .menu-item {
+    @apply transition-all flex items-center text-white
+    px-3 text-lg font-medium whitespace-nowrap
+    motion-reduce:transition-none motion-reduce:transform-none;
   }
 }
