@@ -7,3 +7,14 @@
     @apply text-white;
   }
 }
+
+// Custom breakpoint for positioning our fixed header below the WordPress admin bar
+.site-header {
+  .admin-bar & {
+    top: 46px; 
+
+    @media only screen and (min-width: 782px) {
+      top: 32px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
-<header class="bg-black transition-all duration-150 ease-in-out w-full z-10 motion-reduce:transition-none">
-  <a class="brand text-white" href="{{ home_url('/') }}">
-    {!! $siteName !!}
+<header class="site-header bg-black transition-all duration-150 ease-in-out fixed w-full left-0 top-0 z-10 motion-reduce:transition-none">
+  <a class="brand" href="{{ home_url('/') }}">
+    <img src="{{ asset('images/logo-folkingebrew.svg') }}" alt="Folkingebrew Logo">
   </a>
 
   @if (has_nav_menu('primary_navigation'))
