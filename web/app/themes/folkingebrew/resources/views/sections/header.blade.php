@@ -19,7 +19,7 @@
         <div class="hidden sm:block sm:w-full sm:flex sm:justify-center">
           @if (has_nav_menu('primary_navigation'))
             <nav class="flex justify-center" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
-              @include('partials.navigation', ['menu' => 'primary_navigation', 'children' => 'true' ])
+              @include('partials.navigation', ['menu' => 'primary_navigation', 'children' => 'true', 'classes' => 'text-l'])
             </nav>
           @endif
         </div>
@@ -31,6 +31,11 @@
           <span class="text-white w-3">2 <span class="sr-only">products</span></span>
         </button>
       </div>
+    </div>
+  </div>
+  <div class="hidden fixed overflow-scroll top-0 pt-16 bg-black w-full h-full left-0" aria-hidden="true">
+    <div class="px-4 pt-2 pb-3 space-y-1 h-full flex flex-col justify-center items-start">
+      @include('partials.navigation', ['menu' => 'primary_navigation', 'children' => 'true', 'classes' => 'py-2 rounded-md text-lg'])
     </div>
   </div>
 </header>
