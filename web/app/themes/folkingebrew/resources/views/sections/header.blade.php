@@ -13,6 +13,13 @@
           @endif
         </div>
       </div>
+      <div class="absolute inset-y-0 right-0 flex justify-end items-center pr-2 sm:static sm:pr-0 sm:inset-auto md:w-30">
+        <button type="button" class="bg-transparent flex text-sm focus:outline-none">
+          <span class="sr-only">Open Cart</span>
+          <img src="{{ asset('images/icons/cart.svg') }}" class="block w-6 h-6" alt="Cart Icon">
+          <span class="text-white w-3">2 <span class="sr-only">products</span></span>
+        </button>
+      </div>
     </div>
   </div>
 </header>
