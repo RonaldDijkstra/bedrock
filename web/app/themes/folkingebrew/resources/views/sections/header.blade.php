@@ -7,8 +7,8 @@
         </a>
         <div class="hidden sm:block sm:w-full sm:flex sm:justify-center">
           @if (has_nav_menu('primary_navigation'))
-            <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
-              {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'main-navigation', 'echo' => false]) !!}
+            <nav class="flex justify-center" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
+              @include('partials.navigation', ['menu' => 'primary_navigation', 'children' => 'true' ])
             </nav>
           @endif
         </div>

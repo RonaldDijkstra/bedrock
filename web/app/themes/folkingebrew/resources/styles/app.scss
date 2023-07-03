@@ -12,14 +12,3 @@
     }
   }
 }
-
-// Target the crappy WordPress way of setting up the main navigation, needs refactor
-.main-navigation {
-  @apply flex justify-center;
-
-  .menu-item {
-    @apply transition-all flex items-center text-white
-    px-3 text-lg font-medium whitespace-nowrap
-    motion-reduce:transition-none motion-reduce:transform-none;
-  }
-}
