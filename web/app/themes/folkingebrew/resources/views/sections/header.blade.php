@@ -1,8 +1,8 @@
-<header class="site-header bg-black transition-all duration-150 ease-in-out fixed w-full left-0 top-0 z-10 motion-reduce:transition-none">
+<header id="site-header" class="bg-black transition-all duration-150 ease-in-out fixed w-full left-0 top-0 z-10 motion-reduce:transition-none">
   <div class="max-w-full mx-auto px-2 relative z-10 sm:px-6">
     <div class="relative flex justify-between h-16 sm:h-20">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false" id="menu-toggle">
+        <button type="button" id="menu-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <svg class="button-show-nav block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#FFFFFF" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -33,7 +33,7 @@
       </div>
     </div>
   </div>
-  <div class="hidden fixed overflow-scroll top-0 pt-16 bg-black w-full h-full left-0" aria-hidden="true">
+  <div id="mobile-navigation" class="hidden fixed overflow-scroll top-0 pt-16 bg-black w-full h-full left-0" aria-hidden="true">
     <div class="px-4 pt-2 pb-3 space-y-1 h-full flex flex-col justify-center items-start">
       @include('partials.navigation', ['menu' => 'primary_navigation', 'children' => 'true', 'classes' => 'py-2 rounded-md text-lg'])
     </div>

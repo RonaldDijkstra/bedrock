@@ -3,12 +3,26 @@
 @import 'tailwindcss/utilities';
 
 // Custom breakpoint for positioning our fixed header below the WordPress admin bar
-.site-header {
+#site-header {
   .admin-bar & {
     top: 46px;
 
     @media only screen and (min-width: 782px) {
       top: 32px;
     }
+  }
+}
+
+.mobile-navigation-open {
+  .button-show-nav {
+    @apply hidden;
+  }
+
+  .button-hide-nav {
+    @apply block;
+  }
+
+  #mobile-navigation {
+    @apply block opacity-100 transition-opacity sm:hidden;
   }
 }
