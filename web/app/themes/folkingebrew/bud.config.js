@@ -1,3 +1,9 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const proxyUrl = process.env.PROXY_URL || 'https://bedrock.test';
+
 /**
  * Compiler configuration
  *
@@ -23,7 +29,7 @@ export default async (app) => {
    *
    * @see {@link https://bud.js.org/docs/bud.setPublicPath}
    */
-  app.setPublicPath('/app/themes/sage/public/');
+  app.setPublicPath('/app/themes/folkingebrew/public/');
 
   /**
    * Development server settings
@@ -34,7 +40,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:3000')
-    .setProxyUrl('https://bedrock.test')
+    .setProxyUrl(proxyUrl)
     .watch(['resources/views', 'app']);
 
   /**

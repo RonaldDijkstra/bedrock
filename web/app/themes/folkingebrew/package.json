@@ -24,5 +24,7 @@
     "@roots/bud-tailwindcss": "6.12.2",
     "@roots/sage": "6.12.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
 }

@@ -4,11 +4,7 @@ const config = {
   theme: {
     extend: {
       colors: {
-        green: {
-          default: "#54b848",
-          darker: "#3B9F2F",
-          dark: "#326f2b",
-        }
+        green: "#54b848",
       }, // Extend Tailwind's default colors
     },
   },
