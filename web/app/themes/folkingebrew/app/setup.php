@@ -201,3 +201,21 @@ add_filter('menu_order', function (array $menu_order) {
         'upload.php', // Media
     );
 });
+
+/**
+ * Replace login logo with branded one. 
+ * TODO: Get hashed file instead.
+ *
+ * @return string
+ */
+add_action('login_head', function () {
+    echo "
+	<style>
+        body.login #login h1 a {
+            background: url('/app/themes/folkingebrew/resources/images/brandmark-folkingebrew-green.svg') no-repeat scroll center top transparent;
+            background-size: 100%;
+            height: 135px;
+        }
+	</style>
+	";
+});
