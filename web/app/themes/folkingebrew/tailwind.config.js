@@ -5,7 +5,10 @@ const config = {
     extend: {
       colors: {
         green: "#54b848",
-      }, // Extend Tailwind's default colors
+      },
+      fontFamily: {
+        'sans': ['Open Sans', 'sans-serif']
+      },
     },
   },
   plugins: [],
