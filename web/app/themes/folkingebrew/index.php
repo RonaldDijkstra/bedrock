@@ -10,7 +10,7 @@
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 
-    <div id="app" class="font-sans">
+    <div id="app" class="flex flex-col min-h-screen font-sans at-the-top bg-gradient-to-tr from-green to-dark-green">
       <?php echo view(app('sage.view'), app('sage.data'))->render(); ?>
     </div>
 

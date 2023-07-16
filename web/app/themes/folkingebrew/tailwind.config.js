@@ -6,6 +6,7 @@ const config = {
     extend: {
       colors: {
         green: "#54b848",
+        "dark-green": "#326f2b",
       },
       fontFamily: {
         'sans': ['Open Sans', 'sans-serif']
