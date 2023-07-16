@@ -219,3 +219,15 @@ add_action('login_head', function () {
 	</style>
 	";
 });
+
+/**
+ * Set allowed blocks for editor
+ *
+ * @return array
+ */
+add_filter('allowed_block_types', function () {
+    return array(
+        'core/paragraph',
+        'core/image',
+    );
+});
