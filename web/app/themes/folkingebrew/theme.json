@@ -1230,16 +1230,6 @@
           "name": "Open Sans",
           "slug": "sans",
           "fontFamily": "Open Sans,sans-serif"
-        },
-        {
-          "name": "Ui-serif",
-          "slug": "serif",
-          "fontFamily": "ui-serif,Georgia,Cambria,\"Times New Roman\",Times,serif"
-        },
-        {
-          "name": "Ui-monospace",
-          "slug": "mono",
-          "fontFamily": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace"
         }
       ],
       "fontSizes": [

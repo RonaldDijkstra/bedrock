@@ -25,6 +25,7 @@
     "@roots/sage": "6.12.2"
   },
   "dependencies": {
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "tailwind-config": "file:modules/tailwind-config"
   }
 }
