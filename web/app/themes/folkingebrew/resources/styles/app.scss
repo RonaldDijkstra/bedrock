@@ -51,17 +51,3 @@
     }
   }
 }
-
-.mobile-navigation-open {
-  .button-show-nav {
-    @apply hidden;
-  }
-
-  .button-hide-nav {
-    @apply block;
-  }
-
-  #mobile-navigation {
-    @apply block opacity-100 transition-opacity sm:hidden;
-  }
-}

@@ -4,10 +4,10 @@
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <button type="button" id="menu-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
-          <svg class="button-show-nav block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#FFFFFF" aria-hidden="true">
+          <svg class="block h-6 w-6 mobile-nav-open:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#FFFFFF" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg class="button-hide-nav hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#FFFFFF" aria-hidden="true">
+          <svg class="hidden h-6 w-6 mobile-nav-open:block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#FFFFFF" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -33,7 +33,7 @@
       </div>
     </div>
   </div>
-  <div id="mobile-navigation" class="hidden fixed overflow-scroll top-0 pt-16 bg-black w-full h-full left-0" aria-hidden="true">
+  <div class="hidden fixed overflow-scroll top-0 pt-16 bg-black w-full h-full left-0 mobile-nav-open:block mobile-nav-open:opacity-100 mobile-nav-open:transition-opacity mobile-nav-open:sm:hidden" aria-hidden="true">
     <div class="px-4 pt-2 pb-3 space-y-1 h-full flex flex-col justify-center items-start">
       @include('partials.navigation', ['menu' => 'primary_navigation', 'children' => 'true', 'classes' => 'py-2 rounded-md text-lg'])
     </div>
